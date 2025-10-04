@@ -1,19 +1,54 @@
 body {
-  font-family: Arial, sans-serif;
+   background-color: #0d1c2c;
+    font-family: Arial, sans-serif;
+    color: #a29169;
   font-size: 18px;
   line-height: 1.6;
-  margin: 0;
-  color: #222;
-}     
+  margin: 01;
+  padding: 3rem;
+}   
 
-header,
-footer {
-  background-color: #eaf4ec;
+p {
+  color: #B1B1B1;
+}
+
+li {
+    color:#b1b1b1
+}
+
+header {
+  background-color: #10263d;
+  padding: 1rem;
+  font-size: 36px;
+  text-align: center;
+}
+nav ul {
+    list-style: none;
+  display: flex;    
+  gap: 5rem;
+  justify-content: center; 
+  gap: 1rem;         
+}
+
+nav a {
+  color: #84775b;             
+  background-color: #20423e; 
+  border: 2px solid #84775b; 
+  padding: 1rem 5rem;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+main {
+  max-width: 2000px;
+  margin: 0 auto;
   padding: 1rem;
 }
 
 .site-title {
-  color: #0b6e4f; 
+  color: #a29169; 
   margin: 0 0.5rem 0;
 }
 
@@ -30,7 +65,16 @@ footer {
 }
 
 .hobbies li:nth-child(odd) {
-  background: #f6faf7;
+  background: #20423e;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
+}
+
+footer {
+  background-color: #10263d;
+  color: #B1B1B1;
+  font-size: 14px;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 2rem;
 }
