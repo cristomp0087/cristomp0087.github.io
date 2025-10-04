@@ -16,3 +16,9 @@ footer {
   color: #0b6e4f; 
   margin: 0 0.5rem 0;
 }
+
+#my-image {
+  box-shadow: 0 0 2px 1px #000; 
+  border-radius: 6px;                         
+  margin: 0.5rem 0;            
+}
