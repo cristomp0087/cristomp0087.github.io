@@ -11,3 +11,8 @@ footer {
   background-color: #eaf4ec;
   padding: 1rem;
 }
+
+.site-title {
+  color: #0b6e4f; 
+  margin: 0 0.5rem 0;
+}
