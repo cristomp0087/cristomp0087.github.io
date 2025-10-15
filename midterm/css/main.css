@@ -29,7 +29,23 @@ header nav{
   display: flex; gap: 2rem;
 }
 
+nav {
+  display: flex;                /* coloca os links lado a lado */
+  justify-content: center;      /* centraliza horizontalmente */
+  gap: 2rem;                    /* espaço entre os links */
+  background-color: #55546a;    /* faixa escura abaixo do header */
+  padding: 12px 0;              /* espaço interno acima/abaixo */
+}
 
+nav a {
+  color: #ffffff;               /* texto branco */
+  text-decoration: none;        /* remove sublinhado */
+  font-weight: 600;             /* deixa mais firme */
+  font-size: 1.1rem;
+  padding: 6px 10px;            /* área clicável maior */
+  border-radius: 6px;           /* bordas suaves */
+  transition: background-color 0.3s ease;
+}
 footer {
   background-color: #111948;    /* mesmo tom escuro do header */
   color: white;
