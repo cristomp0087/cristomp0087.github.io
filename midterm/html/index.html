@@ -78,12 +78,30 @@
 
 
 
-<section >
-  <h2>Request a Bad Dad Joke</h2>
-  <form action="">
-    <label></label>
-    <input type="text" name="" id="">
-    <button></button>
+<section>
+  <h2>Do you want receive bad dad jokes? Send us a message</h2>
+
+  <form>
+    <label for="name">Your Name</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Your Email</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="message">Your dad joke</label><br>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+
+    <p>Would you like share you joke?</p>
+    <input type="radio" id="yes" name="visit" value="yes">
+    <label for="yes">Yes</label>
+
+    <input type="radio" id="no" name="visit" value="no">
+    <label for="no">No</label>
+
+    <input type="radio" id="maybe" name="visit" value="maybe">
+    <label for="maybe">Maybe</label><br><br>
+
+    <input type="submit" value="Send">
   </form>
 </section>
 
