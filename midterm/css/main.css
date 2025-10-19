@@ -1,6 +1,9 @@
 body {
   background-color: #e0f7fa;
-
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  color: #222; /* cor padrão do texto */
 }
 
 
@@ -35,11 +38,7 @@ header nav{
   bottom: 12px; left: 50%; transform: translateX(-50%);
   display: flex; gap: 2rem;
 }
-  main{
-    padding: 200px;
-    font-family: "poppins", sans-serif;
 
-  }
 nav {
   display: flex;                /* coloca os links lado a lado */
   justify-content: center;      /* centraliza horizontalmente */
@@ -64,6 +63,41 @@ nav a {
 
 
 
+
+/* === Alinha texto e imagem lado a lado === */
+article.content {
+  display: flex;
+  align-items: flex-start;       /* Alinha topo com topo */
+  justify-content: space-between;
+  gap: 20px;                     /* Espaço entre texto e imagem */
+  width: 80%;
+  margin: 40px auto;
+}
+
+/* === Área do texto === */
+article.content .text {               
+  align-self: flex-start;  
+}
+
+/* === Imagem ao lado direito === */
+article.content img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border: 2px solid #2C2C54;     /* Corrigido o bug visual do VS Code */
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+input[type="submit"] {
+  background-color: #2C2C54;
+  color: white;
+}
 
 
 /* ====== contact form ======== */
