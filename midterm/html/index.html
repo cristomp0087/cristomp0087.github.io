@@ -1,133 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/main.css">
-  <title>Midterm Project</title>
-</head>
-<body>
-
- <header>
-
-  <!-- Background image for the header -->
-
- <img src="/midterm/images/background-header.png" alt="Header background">
-  
-  <h1> HTML/CSS </h1>
-
-</header>
- 
-  <!-- Navigation links -->
-  <nav>
-    <a href="index.html" class="active" aria-current="page">Home</a>
-    <a href="tags.html">HTML &amp; CSS Tags</a>
-    <a href="references.html">Bibliographic References</a>
-  </nav>
-
-<main>
-
-<article class="content">
-
-   <img src="/midterm/images/first-server.jpg" alt="first-server">
-    
-  <div class="text">
-
-      <h2>The Life of HTML & CSS</h2>
-
-    <p>
-      <em>"DO NOT POWER IT DOWN!!"</em><br>
-     That handwritten note, taped to a computer at CERN, kept the first website alive. 
-      The Internet’s origin story began not with a billion-dollar startup, but with a desperate post-it and a lot of trust.
-    </p>
-
-    <p>
-      Before 1993, the Internet already existed — a network of computers quietly ignoring each other.  
-     It took <strong>Tim Berners-Lee</strong> to give it a common language: 
-     the <strong>HyperText Markup Language</strong>.  
-     HTML introduced hyperlinks and structure, turning raw data into readable pages. 
-     In short, Tim taught machines how to talk — and humans how to click.
-    </p>
-
-    <p>
-      A year later, <strong>Håkon Wium Lie</strong> realized that structure wasn’t enough — 
-      the Web needed style. He created <strong>CSS</strong>, giving HTML a voice, a color palette, 
-     and a better outfit. Together, they made the Internet not just functional, but beautiful — 
-     a place where logic meets art and cat videos.
-    </p>
-
-    <p>
-      Decades later, every scroll, every click, and every broken link still trace back to them.  
-      HTML and CSS remain the quiet, witty architects of the digital world —  
-      invisible, essential, and occasionally sarcastic.  
-    <br><br>
-      <em>They built the foundation of our connected lives, 
-      and did it all for free. So think about that next time you draw a cat and demand copyright.</em> 
-    </p>
-
-  </div>
-
-   
-
- </article>
-
-
-    <!-- Lists key information about HTML & CSS -->
-<div class="text2">
-  
-  <h2>Facts About HTML & CSS</h2>
-  <ul>
-
-  <li>Tim Berners-Lee was known for his dry, geeky sense of humor , the kind that could easily pass as a Dad Joke. He once joked that his only regrets were “a few HTML tags and broken links.”</li>
-  <li>Berners-Lee never made money from his invention; he gave the Web to the world for free. In recognition of that, he was knighted by Queen Elizabeth II and became <strong>Sir Tim Berners-Lee</strong>.</li>
-  <li>The very first website is still online — a digital time capsule hosted by CERN. >> http://info.cern.ch</li>
-  <li>HTML builds the structure, and CSS gives it beauty — a perfect parent-child relationship in web design.</li>
-</ul>
-
-</div>
-
-
-
-<section>
-  <h2 class="box">Do you want receive bad dad jokes? Send us a message</h2>
-
-  <form>
-    <label for="name">Your Name</label><br>
-    <input type="text" id="name" name="name">
-
-    <label for="email">Your Email</label><br>
-    <input type="email" id="email" name="email">
-
-    <label for="message">Your dad joke</label><br>
-    <textarea id="message" name="message" rows="4" cols="40"></textarea>
-
-    <p>Would you like to share your jokes?</p>
-   
-    <div class="radio-group">
-    
-  
-          <input type="radio" id="yes" name="visit" value="yes">
-          <label for="yes">Yes</label>
-
-          <input type="radio" id="no" name="visit" value="no">
-          <label for="no">No</label>
-
-          <input type="radio" id="maybe" name="visit" value="maybe">
-          <label for="maybe">Maybe</label>
-
-      </div>
-
-    <input type="submit" value="Send">
-  </form>
-</section>
-
-
-<footer>
-  <p> 2025 HTML&CSS Project. All rights reserved.</p>
-</footer>
-
-  </main>
-
-  
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../css/main.css">
+      <title>Midterm Project</title>
+   </head>
+   <body>
+      <header>
+         <!-- Background image for the header -->
+         <img src="/midterm/images/background-header.png" alt="Header background">
+         <h1> HTML/CSS </h1>
+      </header>
+      <!-- Navigation links -->
+      <nav>
+         <a href="index.html" class="active" aria-current="page">Home</a>
+         <a href="tags.html">HTML &amp; CSS Tags</a>
+         <a href="references.html">Bibliographic References</a>
+      </nav>
+      <main>
+         <article class="content">
+            <img src="/midterm/images/first-server.jpg" alt="first-server">
+            <div class="text">
+               <h2>The Life of HTML & CSS</h2>
+               <p>
+                  <em>"DO NOT POWER IT DOWN!!"</em><br>
+                  That handwritten note, taped to a computer at CERN, kept the first website alive. 
+                  The Internet’s origin story began not with a billion-dollar startup, but with a desperate post-it and a lot of trust.
+               </p>
+               <p>
+                  Before 1993, the Internet already existed — a network of computers quietly ignoring each other.  
+                  It took <strong>Tim Berners-Lee</strong> to give it a common language: 
+                  the <strong>HyperText Markup Language</strong>.  
+                  HTML introduced hyperlinks and structure, turning raw data into readable pages. 
+                  In short, Tim taught machines how to talk — and humans how to click.
+               </p>
+               <p>
+                  A year later, <strong>Håkon Wium Lie</strong> realized that structure wasn’t enough — 
+                  the Web needed style. He created <strong>CSS</strong>, giving HTML a voice, a color palette, 
+                  and a better outfit. Together, they made the Internet not just functional, but beautiful — 
+                  a place where logic meets art and cat videos.
+               </p>
+               <p>
+                  Decades later, every scroll, every click, and every broken link still trace back to them.  
+                  HTML and CSS remain the quiet, witty architects of the digital world —  
+                  invisible, essential, and occasionally sarcastic.  
+                  <br><br>
+                  <em>They built the foundation of our connected lives, 
+                  and did it all for free. So think about that next time you draw a cat and demand copyright.</em> 
+               </p>
+            </div>
+         </article>
+         <!-- Lists key information about HTML & CSS -->
+         <div class="text2">
+            <h2>Facts About HTML & CSS</h2>
+            <ul>
+               <li>Tim Berners-Lee was known for his dry, geeky sense of humor , the kind that could easily pass as a Dad Joke. He once joked that his only regrets were “a few HTML tags and broken links.”</li>
+               <li>Berners-Lee never made money from his invention; he gave the Web to the world for free. In recognition of that, he was knighted by Queen Elizabeth II and became <strong>Sir Tim Berners-Lee</strong>.</li>
+               <li>The very first website is still online — a digital time capsule hosted by CERN. >> http://info.cern.ch</li>
+               <li>HTML builds the structure, and CSS gives it beauty — a perfect parent-child relationship in web design.</li>
+            </ul>
+         </div>
+         <section>
+            <h2 class="box">Do you want receive bad dad jokes? Send us a message</h2>
+            <form>
+               <label for="name">Your Name</label><br>
+               <input type="text" id="name" name="name">
+               <label for="email">Your Email</label><br>
+               <input type="email" id="email" name="email">
+               <label for="message">Your dad joke</label><br>
+               <textarea id="message" name="message" rows="4" cols="40"></textarea>
+               <p>Would you like to share your jokes?</p>
+               <div class="radio-group">
+                  <input type="radio" id="yes" name="visit" value="yes">
+                  <label for="yes">Yes</label>
+                  <input type="radio" id="no" name="visit" value="no">
+                  <label for="no">No</label>
+                  <input type="radio" id="maybe" name="visit" value="maybe">
+                  <label for="maybe">Maybe</label>
+               </div>
+               <input type="submit" value="Send">
+            </form>
+         </section>
+         <footer>
+            <p> 2025 HTML&CSS Project. All rights reserved.</p>
+         </footer>
+      </main>
+   </body>
 </html>
