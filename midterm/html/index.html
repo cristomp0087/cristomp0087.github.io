@@ -73,7 +73,8 @@
 
 
     <!-- Lists key information about HTML & CSS -->
-
+<div class="text2">
+  
   <h2>Facts About HTML & CSS</h2>
   <ul>
 
@@ -82,32 +83,39 @@
   <li>The very first website is still online — a digital time capsule hosted by CERN. >> http://info.cern.ch</li>
   <li>HTML builds the structure, and CSS gives it beauty — a perfect parent-child relationship in web design.</li>
 </ul>
-</section>
+
+</div>
 
 
 
 <section>
-  <h2>Do you want receive bad dad jokes? Send us a message</h2>
+  <h2 class="box">Do you want receive bad dad jokes? Send us a message</h2>
 
   <form>
     <label for="name">Your Name</label><br>
-    <input type="text" id="name" name="name"><br><br>
+    <input type="text" id="name" name="name">
 
     <label for="email">Your Email</label><br>
-    <input type="email" id="email" name="email"><br><br>
+    <input type="email" id="email" name="email">
 
     <label for="message">Your dad joke</label><br>
-    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea>
 
-    <p>Would you like share you joke?</p>
-    <input type="radio" id="yes" name="visit" value="yes">
-    <label for="yes">Yes</label>
+    <p>Would you like to share your jokes?</p>
+   
+    <div class="radio-group">
+    
+  
+          <input type="radio" id="yes" name="visit" value="yes">
+          <label for="yes">Yes</label>
 
-    <input type="radio" id="no" name="visit" value="no">
-    <label for="no">No</label>
+          <input type="radio" id="no" name="visit" value="no">
+          <label for="no">No</label>
 
-    <input type="radio" id="maybe" name="visit" value="maybe">
-    <label for="maybe">Maybe</label><br><br>
+          <input type="radio" id="maybe" name="visit" value="maybe">
+          <label for="maybe">Maybe</label>
+
+      </div>
 
     <input type="submit" value="Send">
   </form>
