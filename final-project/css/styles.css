@@ -41,22 +41,21 @@ img {
     width: 120px;
 }
 .site-header {
-    background:#222222;
-    color: #bf8d30;
+    background:#242023;
     padding: 10px 0;
 }
 
 .site-header a {
     color: #bf8d30;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* Horizontal navigation menu */
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 30x;
     margin-top: 30px;
 }
 
@@ -76,14 +75,7 @@ img {
 
 
 /* Search button yellow */
-.site-search button {
-    padding: 4px 10px;
-    border: none;
-    background: #c78c06;
-    color: #000000;
-    font-weight: bold;
-    cursor: pointer;
-}
+
 
 
 .header-inner {
@@ -107,7 +99,7 @@ img {
 }
 
 .site-search button {
-    padding: 0.4rem 0.8rem;
+    padding: 0.5rem 0.8rem;
     border: none;
     background: #c78c06;
     color: #222;
@@ -115,7 +107,14 @@ img {
     cursor: pointer;
 }
 
+@media (min-width: 760px) {
+    .site-search {
+        width: auto;      
+        margin-top: 0;    
+        margin-left: 1rem;
+    }
 
+}
 /* ------------------------------------*/
 /*            HERO IMAGE               */
 /*------------------------------------ */
@@ -123,15 +122,27 @@ img {
 .hero-media img {
     width: 100%;
     height: auto;
+     display: block;
     object-fit: cover;
     border-radius: 4px;
 }
 
 /* THE OVERLAY BOX */
+
+.hero-inner {
+    position: relative;
+}
+
+
+.hero {
+    position: relative;     
+}
+
+
 .hero-content {
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 25%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.7); /* translucent dark box */
     padding: 30px;
@@ -159,30 +170,23 @@ img {
 /*        ABOUT US SECTION       */
 /* ----------------------------- */
 
+
 .about {
-    background: #F2E6C4;      
+    background: #F2E6C4;
     padding: 40px 0;
 }
 
+/* MOBILE – empilhado */
 .about-inner {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;   /* imagem em cima, texto embaixo */
     gap: 30px;
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
 }
 
 .about-media img {
     width: 100%;
-    max-width: 500px;
     border-radius: 4px;
     object-fit: cover;
-}
-
-.about-content {
-    flex: 1;
 }
 
 .about-content h2 {
@@ -195,12 +199,38 @@ img {
     font-size: 1rem;
 }
 
+
+
+
+
+
+
+
+
+@media (min-width: 760px) {
+
+.about-inner {
+        flex-direction: row;      
+        align-items: flex-start;  
+        gap: 30px;
+}
+
+    .about-media img {
+        max-width: 500px;         
+}
+
+ .about-content {
+        flex: 1;                  
+ }
+}
+
+
 /* ----------------------------- */
 /*        SERVICES             */
 /* ----------------------------- */
 
 .services {
-    padding: 2.5rem 0;
+    padding: 40px 0;
 }
 
 .services-inner h2 {
@@ -215,8 +245,7 @@ img {
 
 .service-media img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    display: block;
 }
 
 .service-content {
@@ -231,10 +260,41 @@ img {
     font-size: 0.95rem;
 }
 
-.service-content .button {
-    margin-top: 0.75rem;
+.services-inner .button {
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
+@media (min-width: 760px) {
+
+    /* tira o “empilhamento” dos artigos, deixa o gap cuidar do espaço */
+    .services-row {
+        margin-bottom: 2rem;
+    }
+
+    /* LINHA DE CIMA: 2 serviços lado a lado */
+    .services-row-top {
+        display: flex;
+        gap: 20px;
+    }
+
+    .services-row-top article {
+        flex: 1 1 50%;   /* cada card ocupa metade da linha */
+        margin-bottom: 0;
+    }
+
+    /* LINHA DE BAIXO: 3 serviços lado a lado */
+    .services-row-bottom {
+        display: flex;
+        gap: 20px;
+    }
+
+    .services-row-bottom article {
+        flex: 1 1 33.333%; /* três colunas iguais */
+        margin-bottom: 0;
+    }
+}
 
 /*/ ----------------------------- */
 /*          OUR VISION           */   
@@ -295,7 +355,18 @@ img {
     font-size: 1.2rem;
 }
 
+@media (min-width: 760px) {
 
+    .team-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .team-photo,
+    .team-card {
+        flex: 1 1 50%;   /* cada metade da linha */
+    }
+}
 /* ----------------------------- */
 /*            CONTACT             */   
 /* ----------------------------- */  
