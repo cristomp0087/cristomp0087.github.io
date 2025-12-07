@@ -37,11 +37,8 @@ img {
 /*             HEADER                  */
 /* ------------------------------------*/
 
-.logo img {
-    width: 120px;
-}
-.site-header {
-    background:#242023;
+..site-header {
+    background: #242023;
     padding: 10px 0;
 }
 
@@ -51,21 +48,40 @@ img {
     font-weight: 400;
 }
 
-/* Horizontal navigation menu */
+/* logo menor no mobile, centralizada */
+.logo img {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* HEADER COMO COLUNA NO MOBILE */
+.header-inner {
+    display: flex;
+    flex-direction: column;      /* <- chave: empilha logo, nav, search */
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 10px 0;
+}
+
+/* NAV: lista vertical no mobile */
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 30x;
-    margin-top: 30px;
+    flex-direction: column;      /* itens um embaixo do outro */
+    gap: 0;                      /* gap 0, vamos usar padding/borda */
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list a {
     color: #bf8d30;
     padding: 10px 20px;
     display: block;
+    border-top: 1px solid #3a3438;   /* linha divisória entre os itens */
 }
 
-/* Hover */
+/* Hover / active */
 .nav-list a:hover,
 .nav-list a:focus,
 .nav-list a.active {
@@ -73,19 +89,7 @@ img {
     color: #000000;
 }
 
-
-/* Search button yellow */
-
-
-
-.header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-/* Search */
+/* SEARCH: full width no mobile */
 .site-search {
     width: 100%;
     display: flex;
@@ -108,60 +112,113 @@ img {
 }
 
 @media (min-width: 760px) {
-    .site-search {
-        width: auto;      
-        margin-top: 0;    
-        margin-left: 1rem;
+
+    /* HEADER em linha no desktop */
+    .header-inner {
+        flex-direction: row;     /* agora tudo na mesma linha */
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        
     }
 
+    /* logo volta a encostar à esquerda */
+    .logo img {
+        margin: 0;
+    }
+
+    /* NAV vira horizontal */
+    .nav-list {
+        flex-direction: row;     /* linha */
+        gap: 30px;               /* cuidado: aqui é px, não x */
+        margin-left: 1.5rem;
+    }
+
+    .nav-list a {
+        border-top: none;        /* tira a linha entre itens */
+        padding: 10px 20px;
+    }
+
+    /* SEARCH encolhe e vai para a direita */
+    .site-search {
+        width: auto;
+        margin-top: 0;
+        margin-left: auto;
+    }
+}
+
+
+@media (min-width: 760px) {
+
+    /* hero passa a ser “palco” para posição absoluta */
+    .hero {
+        position: relative;
+    }
+
+    .hero-inner {
+        position: relative;
+    }
+
+    /* Caixa sobe por cima da imagem no desktop */
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;                 /* ajusta a gosto (5%, 10%, etc) */
+        transform: translateY(-50%);
+        max-width: 550px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
 }
 /* ------------------------------------*/
 /*            HERO IMAGE               */
 /*------------------------------------ */
 
+/* Faz o hero ocupar a largura toda da tela */
+.hero-inner.container {
+    max-width: none;      /* ignora o max-width:1200px do .container */
+    width: 100%;
+    margin: 0;
+    padding: 0;           /* tira o padding lateral do container aqui */
+}
+
+/* Imagem sempre de fora a fora */
 .hero-media img {
     width: 100%;
+    max-width: none;      /* ignora max-width:1200px do seletor global de img */
     height: auto;
-     display: block;
+    display: block;
     object-fit: cover;
-    border-radius: 4px;
 }
 
-/* THE OVERLAY BOX */
-
-.hero-inner {
-    position: relative;
-}
-
-
-.hero {
-    position: relative;     
-}
-
-
+/* MOBILE: caixa de texto normal, embaixo da imagem */
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.7); /* translucent dark box */
-    padding: 30px;
-    max-width: 550px;
-    color: white;
+    background: #222;
+    color: #fff;
+    padding: 1.5rem 1rem;
 }
 
-.hero-content h1 {    font-size: 2.8rem;
-    margin-bottom: 15px;
+.hero-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.hero-content p {
+    margin-bottom: 1rem;
 }
 
 .hero-content a {
     display: inline-block;
     background: #c78c06;
-    padding: 10px 18px;
-    color: black;
+    padding: 0.6rem 1.2rem;
+    color: #000;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 0.5rem;
 }
 
 
